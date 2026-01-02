@@ -1,10 +1,11 @@
 import Builder from "./2B2D/Builder";
-import GamePlugin from "./Example/GamePlugin";
+import PianoPlugin from "./Piano/PianoPlugin";
 
 async function main() {
   const builder = await Builder.create(800, 600);
 
-  builder.plugin(GamePlugin);
+  builder.plugin(PianoPlugin);
+
   const engine = await builder.finish();
 
   engine.start();
